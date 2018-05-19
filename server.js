@@ -35,7 +35,6 @@ app.get('/', function (req, res) {
     res.send('Welcome to Passport with Sequelize');
 });
 
-
 //Models
 let models = require("./app/models");
 
