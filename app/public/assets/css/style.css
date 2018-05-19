@@ -28,13 +28,13 @@
 }
 
 .trade {
-    background-image: url("../images/heart.png");
+    background-image: url("../img/heart.png");
     background-size: contain;
     margin-left: auto;
 }
 
 .pass {
-    background-image: url("../images/redx.png");
+    background-image: url("../img/redx.png");
     background-size: contain;
     margin-right: auto;
 }

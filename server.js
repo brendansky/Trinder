@@ -35,11 +35,10 @@ app.use(passport.session()); // persistent login sessions
 // Set handlebars
 app.set('views', './app/views')
 app.engine('hbs', exphbs({
-    extname: '.hbs'
+    extname: '.hbs',
+    defaultLayout: "main"
+
 }));
-
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-
 
 app.set('view engine', '.hbs');
 
