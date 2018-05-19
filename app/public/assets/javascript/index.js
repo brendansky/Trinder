@@ -1,7 +1,7 @@
 function getImage() {
 
     var item = $(".item");
-    var itemImage = $(`<img class="main-image" src="assets/images/${items[Math.floor(Math.random() * items.length)].image}">`);
+    var itemImage = $(`<img class="main-image" src="assets/img/${items[Math.floor(Math.random() * items.length)].image}">`);
 
     item.html(itemImage)
 
