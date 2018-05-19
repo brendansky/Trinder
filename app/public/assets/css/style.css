@@ -1,0 +1,52 @@
+.jumbotron {
+    background-color: grey;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    border: solid red 4px;
+}
+
+.main-image {
+    object-fit: cover;
+    height: 24rem;
+    width: 24rem;
+    border: solid black 1px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.button-container {
+    border: solid black 1px;
+    margin: auto;
+}
+
+.btn {
+    height: 5rem;
+    width: 5rem;
+    margin: 2px;
+}
+
+.trade {
+    background-image: url("../images/heart.png");
+    background-size: contain;
+    margin-left: auto;
+}
+
+.pass {
+    background-image: url("../images/redx.png");
+    background-size: contain;
+    margin-right: auto;
+}
+
+.inventory-image {
+    object-fit: cover;
+    width: 12rem;
+    height: 12rem;
+    margin: 1rem;
+    border: solid black 1px;
+}
+
+.inventory-description {
+    text-align: center;
+}
