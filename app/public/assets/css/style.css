@@ -1,8 +1,14 @@
+body{
+    background-image: url("../img/background-stuff.jpg");
+    background-size: cover;
+}
+
 .jumbotron {
-    background-color: grey;
+    background-color: rgba(100, 100, 100, .75);
     margin-left: 6rem;
     margin-right: 6rem;
     border: solid red 4px;
+    border-radius: 4rem;
 }
 
 .main-image {
@@ -22,10 +28,19 @@
 }
 
 .btn {
+    background-color: azure;
     height: 5rem;
     width: 5rem;
     margin: 2px;
 }
+.signup {
+    margin-right: auto
+}
+
+.signin {
+    margin-left: auto
+}
+
 
 .trade {
     background-image: url("../img/heart.png");
@@ -39,6 +54,21 @@
     margin-right: auto;
 }
 
+.nav-dashboard {
+    background-image: url("../img/home-icon.png");
+    background-size: contain;
+}
+
+.nav-profile {
+    background-image: url("../img/profile-icon.png");
+    background-size: contain;
+}
+
+.nav-inventory {
+    background-image: url("../img/box-icon.png");
+    background-size: contain;
+}
+
 .inventory-image {
     object-fit: cover;
     width: 12rem;
@@ -49,4 +79,20 @@
 
 .inventory-description {
     text-align: center;
+}
+
+.login-page {
+    text-align: center;
+}
+
+.login-form {
+    width: 80%;
+    margin: auto;
+    border: solid black 1px;
+}
+
+.login-btn {
+    height: 2rem;
+    width: 6rem;
+    margin-left: 10rem;
 }

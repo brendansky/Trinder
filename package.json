@@ -23,5 +23,13 @@
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "sequelize": "^4.37.8"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericxl/Trinder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ericxl/Trinder/issues"
+  },
+  "homepage": "https://github.com/ericxl/Trinder#readme"
 }
