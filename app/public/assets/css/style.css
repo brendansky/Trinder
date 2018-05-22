@@ -70,6 +70,7 @@ body{
 }
 
 .inventory-image {
+    background-color: white;
     object-fit: cover;
     width: 12rem;
     height: 12rem;
@@ -95,4 +96,8 @@ body{
     height: 2rem;
     width: 6rem;
     margin-left: 10rem;
+}
+
+.add-item {
+    border: solid black 1px;
 }

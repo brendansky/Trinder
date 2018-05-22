@@ -23,7 +23,7 @@ var items = [
     phone = {
         image: "phone.jpeg",
         description: "a phone"
-    }
+    },
 ];
 
 
