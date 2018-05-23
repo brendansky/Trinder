@@ -50,14 +50,6 @@ module.exports = function (sequelize, Sequelize) {
 
     });
 
-    User.associate = function(models) {
-        // Associating Author with Posts
-        // When an Author is deleted, also delete any associated Posts
-        User.hasMany(models.Item, {
-          onDelete: "cascade"
-        });
-      };
-
     return User;
 
 }

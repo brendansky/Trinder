@@ -1,6 +1,7 @@
 // Dependencies
 // =============================================================
 
+var authController = require('../controllers/authcontroller.js');
 // Requiring our models
 var db = require("../models");
 
@@ -8,12 +9,24 @@ var db = require("../models");
 // =============================================================
 module.exports = function (app) {
 
-  app.post("/api/items", function (req, res) {
-    db.Item.create(req.body).then(function (dbPost) {
-      res.json(dbPost);
+  app.get("/api/items", function (req, res) {
 
-      console.log("hello world")
+    db.Item.findAll({
+
+    }).then(function (dbItem) {
+
+      res.json(dbItem);
     });
+
   });
+
+  app.post("/api/items", function (req, res) {
+    db.Item.create(req.body).then(function (dbItem) {
+      res.json(dbItem);
+
+    })
+  })
+
+
 
 };

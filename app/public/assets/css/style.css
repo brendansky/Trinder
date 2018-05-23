@@ -1,14 +1,23 @@
-body{
+body {
     background-image: url("../img/background-stuff.jpg");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    padding-left: 4rem;
 }
 
 .jumbotron {
     background-color: rgba(100, 100, 100, .75);
     margin-left: 6rem;
     margin-right: 6rem;
-    border: solid red 4px;
-    border-radius: 4rem;
+    border: solid rgba(100, 100, 100, .90) 4px;
+    border-radius: 2rem;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .main-image {
@@ -20,6 +29,8 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
+    border-radius: 2rem;
+
 }
 
 .button-container {
@@ -29,10 +40,13 @@ body{
 
 .btn {
     background-color: azure;
-    height: 5rem;
-    width: 5rem;
+    height: 8rem;
+    width: 8rem;
     margin: 2px;
+    border-radius: 2rem;
+
 }
+
 .signup {
     margin-right: auto
 }
@@ -40,7 +54,6 @@ body{
 .signin {
     margin-left: auto
 }
-
 
 .trade {
     background-image: url("../img/heart.png");
@@ -76,10 +89,24 @@ body{
     height: 12rem;
     margin: 1rem;
     border: solid black 1px;
+    border-radius: 2rem;
+
 }
 
 .inventory-description {
     text-align: center;
+    background-color: white;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.add-item {
+    width: 80%;
+    margin: auto;
+    border: solid rgba(100, 100, 100, .90) 1px;
+    padding: 2rem;
+    border-radius: 2rem;
+
 }
 
 .login-page {
@@ -89,7 +116,6 @@ body{
 .login-form {
     width: 80%;
     margin: auto;
-    border: solid black 1px;
 }
 
 .login-btn {
@@ -98,6 +124,19 @@ body{
     margin-left: 10rem;
 }
 
-.add-item {
-    border: solid black 1px;
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 750px) {
+    .main-image {
+        width: 80%;
+        height: auto;
+    }
+    .inventory-image {
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
