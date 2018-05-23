@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="navbar-nav">
+        <a class="nav-dashboard btn" href="/dashboard"></a>
+        <a class="nav-profile btn" href="/profile"></a>
+
+
+    </div>
+
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+
+    <h1>Inventory</h1>
+
+
+    <div class="container">
+        <div class="row inventory">
+
+            <div>
+
+                <img id="add-item-button" class="inventory-image" src="assets/img/add-item.png">
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    <form id="add-item" class="add-item hidden">
+        <div class="form-group">
+         
+            <input placeholder="Item Name" type="text" class="form-control" id="item-name">
+            <br />
+           
+            <textarea placeholder="Description" class="form-control" rows="6" id="description"></textarea>
+
+            <br />
+         
+            <input placeholder="Image" type="text" class="form-control" id="image"></input>
+
+            <br />
+            <button type="submit" class="btn-success submit">Submit</button>
+        </div>
+    </form>
+
+
+
+
+
+</div>
+
+<script type="text/javascript" src="assets/javascript/inventory.js"></script>
