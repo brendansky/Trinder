@@ -3,10 +3,10 @@ var authController = require('../controllers/authcontroller.js');
 module.exports = function (app, passport, db) {
     app.get('/signup', authController.signup);
     app.get('/signin', authController.signin);
-    app.get('/profile', authController.profile);
-    app.get('/inventory', authController.inventory);
+    app.get('/profile', isLoggedIn, authController.profile);
+    app.get('/inventory', isLoggedIn, authController.inventory);
     app.get('/dashboard', isLoggedIn, authController.dashboard);
-    app.get('/logout', authController.logout);
+    app.get('/logout', isLoggedIn, authController.logout);
     app.post('/signup', passport.authenticate('local-signup', {
         successRedirect: '/dashboard',
         failureRedirect: '/signup'
@@ -23,6 +23,9 @@ module.exports = function (app, passport, db) {
     });
 
     app.post("/api/items",isLoggedIn, function (req, res) {
+        
+        console.log(req.body.image);
+
         db.Item.create(req.body).then(function (dbItem) {
             res.json(dbItem);
 

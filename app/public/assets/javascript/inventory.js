@@ -5,7 +5,7 @@ $(document).ready(function () {
             var items = [];
             for (var i = 0; i < data.length; i++) {
 
-                items.push(createItemRow(data[i]));
+                items.push(data[i]);
             }
 
             console.log("items have been gotten");
@@ -17,7 +17,7 @@ $(document).ready(function () {
 
         for (i = 0; i < items.length; i++) {
             var newItem = $("<div>");
-            var newItemImage = $(`<img class="inventory-image" src="assets/img/${items[i].image}">`);
+            var newItemImage = $(`<img class="inventory-image" src="${items[i].image}">`);
             var itemDesription = $(`<p class="inventory-description" > ${items[i].description} <p>`);
             newItem.append(newItemImage);
             newItem.append(itemDesription);
@@ -30,7 +30,7 @@ $(document).ready(function () {
 
     $("#add-item-button").on("click", function () {
         $("#add-item").removeClass("hidden");
-    
+
     });
 
 
@@ -50,12 +50,9 @@ $(document).ready(function () {
         if (!descriptionInput.val().trim().trim()) {
             return;
         }
-        if (!imageInput.val().trim().trim()) {
-            return;
-        }
 
-        console.log(nameInput,descriptionInput,imageInput)
-
+        console.log(nameInput, descriptionInput, imageInput)
+        console.log('uploading');
         upsertItem({
 
             name: nameInput
@@ -64,15 +61,12 @@ $(document).ready(function () {
             description: descriptionInput
                 .val()
                 .trim(),
-            image: imageInput
-                .val()
-                .trim()
+            image: imageInput.val().trim()
         });
 
 
         function upsertItem(itemData) {
-            $.post("/api/items", itemData)
-                .then(getItems())
+            $.post("/api/items", itemData);
         }
 
         console.log("item added to db")

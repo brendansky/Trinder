@@ -1,13 +1,24 @@
+var items;
+
+$.get("/api/items", function (data) {
+    items = [];
+    for (var i = 0; i < data.length; i++) {
+
+        items.push(data[i].image);
+    }
+
+    console.log("items have been gotten");
+    getImage();
+})
+
 function getImage() {
 
     var item = $(".item");
-    var itemImage = $(`<img class="main-image" src="assets/img/${items[Math.floor(Math.random() * items.length)].image}">`);
+    var itemImage = $(`<img class="main-image" src="${items[Math.floor(Math.random() * items.length)]}">`);
 
     item.html(itemImage)
 
 };
-
-getImage();
 
 
 $(".trade").on("click", function () {

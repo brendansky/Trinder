@@ -2,12 +2,19 @@ let express = require("express");
 let exphbs = require("express-handlebars");
 let bodyParser = require("body-parser");
 let passport = require('passport')
+let cloudinary = require('cloudinary')
 let session = require('express-session')
 let env = require('dotenv').load();
+
 
 let PORT = process.env.PORT || 3000;
 let app = express();
 
+cloudinary.config({
+    cloud_name: 'trinder',
+    api_key: '161239165341579',
+    api_secret: '5vOVPKYI5MZa-jIzQYPac9xZz2g'
+});
 
 app.use(express.static(process.cwd() + "/app/public"));
 
