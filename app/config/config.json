@@ -29,17 +29,9 @@
     },
  
     "production": {
- 
-        "username": "",
- 
-        "password": null,
- 
-        "database": "",
- 
-        "host": "127.0.0.1",
- 
+
+        "use_env_variable": "JAWDB_URL",
         "dialect": "mysql"
- 
     }
  
 }

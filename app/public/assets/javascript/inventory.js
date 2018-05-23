@@ -28,8 +28,6 @@ $(document).ready(function () {
         };
     };
 
-    populateInventory(items);
-
     $("#add-item-button").on("click", function () {
         $("#add-item").removeClass("hidden");
     
@@ -39,6 +37,8 @@ $(document).ready(function () {
     var nameInput = $("#item-name");
     var descriptionInput = $("#description")
     var imageInput = $("#image")
+
+    $(document).on("submit", "#add-item", itemFormSubmit);
 
     function itemFormSubmit(event) {
 
@@ -53,6 +53,8 @@ $(document).ready(function () {
         if (!imageInput.val().trim().trim()) {
             return;
         }
+
+        console.log(nameInput,descriptionInput,imageInput)
 
         upsertItem({
 

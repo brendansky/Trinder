@@ -1,7 +1,6 @@
 // Dependencies
 // =============================================================
 
-var authController = require('../controllers/authcontroller.js');
 // Requiring our models
 var db = require("../models");
 
