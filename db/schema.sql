@@ -1,8 +1,8 @@
 DROP DATABASE IF EXISTS trinderDB;
 
-CREATE DATABASE trinderBD;
+CREATE DATABASE trinderDB;
 
-USE trinderBD;
+USE trinderDB;
 
 CREATE TABLE users (
     `id` INTEGER(10) AUTO_INCREMENT NOT NULL,
@@ -24,9 +24,7 @@ CREATE TABLE inventory (
     `product_condition`  INTEGER(10),
     `image_1`VARCHAR(100),
     `image_2`VARCHAR(100),
-    `image_3`VARCHAR(100)
+    `image_3`VARCHAR(100),
+    PRIMARY KEY (id)
     );
 
-CREATE TABLE user_interaction (
-
-);
