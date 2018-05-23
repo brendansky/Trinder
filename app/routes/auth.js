@@ -1,6 +1,6 @@
 var authController = require('../controllers/authcontroller.js');
 
-module.exports = function (app, passport) {
+module.exports = function (app, passport, db) {
     app.get('/signup', authController.signup);
     app.get('/signin', authController.signin);
     app.get('/profile', authController.profile);
@@ -15,6 +15,19 @@ module.exports = function (app, passport) {
         successRedirect: '/dashboard',
         failureRedirect: '/signin'
     }));
+
+    app.get("/api/items", isLoggedIn, function (req, res) {
+        db.Item.findAll({}).then(function (dbItem) {
+            res.json(dbItem);
+        });
+    });
+
+    app.post("/api/items",isLoggedIn, function (req, res) {
+        db.Item.create(req.body).then(function (dbItem) {
+            res.json(dbItem);
+
+        })
+    });
 }
 
 function isLoggedIn(req, res, next) {
