@@ -1,12 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link nav-dashboard btn" href="/dashboard"></a>
-        <a class="nav-item nav-link nav-inventory btn" href="/inventory"></a>
+<div class="navbar">
+
+    <a class="nav-item nav-link nav-dashboard btn" href="/dashboard"></a>
+    <a class="nav-item nav-link nav-inventory btn" href="/inventory"></a>
 
 
 
-    </div>
-</nav>
+</div>
 
 
 <div class="jumbotron jumbotron-fluid">
@@ -17,10 +16,22 @@
         <h1 class="display-4">Your Name Here</h1>
         <img class="profile-img" src="assets/img/profile-picture.png" alt="Profile Picture">
 
+        <form id="add-item" class="edit-profile">
+            <div class="form-group">
 
-        <p class="lead">Email</p>
-        <p class="lead">Phone Number</p>
-        <p class="lead">Address</p>
+                <input placeholder="Your Name" type="text" class="form-control" id="profile-name">
+                <br />
+
+                <input placeholder="Email Address" class="form-control" id="profile-email"></input>
+
+                <br />
+
+                <input placeholder="Phone Number" type="text" class="form-control" id="prolie-phone"></input>
+
+                <br />
+                <button type="submit" class="btn-success submit">Update</button>
+            </div>
+        </form>
 
     </div>
 </div>
