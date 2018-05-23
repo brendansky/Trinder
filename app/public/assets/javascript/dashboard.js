@@ -18,3 +18,10 @@ $(".trade").on("click", function () {
 $(".pass").on("click", function () {
     getImage();
 });
+
+$(".nav-trade").on("click", function () {
+    $(".browse-div").addClass("hidden");
+    $(".trade-div").removeClass("hidden");
+
+
+})
